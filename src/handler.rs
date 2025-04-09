@@ -99,7 +99,7 @@ pub async fn get_todo_handler(
 
     let error_response = GenericResponse {
         status: "fail".to_string(),
-        message: format!("Todo with ID: {} not found", id),
+        message: format!("Todo with ID {} not found", id),
     };
     Err(Custom(Status::NotFound, Json(error_response)))
 }
